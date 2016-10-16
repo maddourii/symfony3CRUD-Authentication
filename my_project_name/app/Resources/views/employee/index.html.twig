@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h2 class="page-header"> Contact list</h2>
+<table class="table table-hover"> 
+    <thead>
+        <tr> 
+            <th>#</th> 
+            <th>First Name</th> 
+            <th>Last Name</th> 
+            <th>Email</th> </tr> 
+    </thead> 
+    <tbody>
+        {% for contact in contacts %}
+        <tr>
+            <th scope="row">{{contact.id}}</th>
+            <td>{{contact.name}}</td> 
+            <td>{{contact.lname}}</td> 
+            <td>{{contact.email}}</td> 
+            <td>
+                <a href="/employee/details/{{contact.id}}" class="btn btn-success">View</a>
+                <a href="/employee/edit/{{contact.id}}" class="btn btn-default">Edit</a>
+                <a href="/employee/delete/{{contact.id}}" class="btn btn-danger">delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody> 
+</table>
+{% endblock %}
