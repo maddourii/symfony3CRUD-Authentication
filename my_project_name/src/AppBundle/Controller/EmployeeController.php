@@ -12,7 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 class EmployeeController extends Controller
 {
     /**
-     * @Route("/employee", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function listAction()
     {
